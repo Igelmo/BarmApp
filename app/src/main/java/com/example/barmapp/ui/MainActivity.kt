@@ -1,11 +1,10 @@
-package com.example.barmapp.UI
+package com.example.barmapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.barmapp.R
 import com.example.barmapp.databinding.ActivityMainBinding
 
