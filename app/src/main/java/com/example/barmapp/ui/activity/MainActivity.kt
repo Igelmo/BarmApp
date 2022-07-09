@@ -1,4 +1,4 @@
-package com.example.barmapp.ui
+package com.example.barmapp.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
