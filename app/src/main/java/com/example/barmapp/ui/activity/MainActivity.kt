@@ -1,5 +1,6 @@
 package com.example.barmapp.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -20,8 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
-        binding.viewCocktailsButton.setOnClickListener { it ->
-
+        binding.viewCocktailsButton.setOnClickListener {
+            startActivity(Intent(this, CocktailList::class.java))
         }
 
     }

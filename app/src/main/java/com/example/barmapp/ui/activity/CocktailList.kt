@@ -19,7 +19,6 @@ class CocktailList : AppCompatActivity() {
 
         binding = CocktailListBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar)
         val manager = LinearLayoutManager(this)
         binding.listOfCocktails.layoutManager = manager
         val listCocktails: List<String>
