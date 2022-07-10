@@ -11,4 +11,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="view_cocktails">View cocktails</string>
     <string name="cocktail_image">Cocktail Image</string>
+    <string name="cocktail_name">Cocktail name</string>
 </resources>
