@@ -7,7 +7,8 @@ import retrofit2.Retrofit
 import retrofit2.http.GET
 
 class CocktailDataBaseRepository : CocktailRepository{
-    override fun getCocktailsStartingWithA() = CocktailDBAPI.retrofitService.getCocktailsStartingWithA()
+    //TODO: Add with dependency injection the retrofit service later on
+    override suspend fun getCocktailsStartingWithA() = CocktailDBAPI.retrofitService.getCocktailsStartingWithA().drinks
 
     override fun getCocktailDescription(id: Int): String {
         TODO("Not yet implemented")
@@ -17,7 +18,7 @@ class CocktailDataBaseRepository : CocktailRepository{
         TODO("Not yet implemented")
     }
 
-    override fun getImage(id: Int): Image {
+    override fun getImage(id: Int): String {
         TODO("Not yet implemented")
     }
 }
