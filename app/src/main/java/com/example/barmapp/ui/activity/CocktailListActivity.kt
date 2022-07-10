@@ -10,17 +10,20 @@ import com.example.barmapp.R
 import com.example.barmapp.databinding.CocktailListBinding
 import com.example.barmapp.ui.adapter.CocktailListAdapter
 
-class CocktailList : AppCompatActivity() {
+class CocktailListActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: CocktailListBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = CocktailListBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         val manager = LinearLayoutManager(this)
         binding.listOfCocktails.layoutManager = manager
+
+        binding.toolbar.toolbarMain.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24)
+
         val listCocktails: List<String>
         listCocktails = mutableListOf("Cocktail 1", "Cocktail 2", "Cocktail 3")
         val cocktailListAdapter = CocktailListAdapter(listCocktails)
@@ -29,9 +32,4 @@ class CocktailList : AppCompatActivity() {
 
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
-    }
 }
