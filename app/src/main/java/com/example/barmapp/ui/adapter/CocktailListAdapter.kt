@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.example.barmapp.R
 import com.example.barmapp.databinding.CocktailItemBinding
 import com.example.barmapp.domain.dataStructures.Cocktail
@@ -25,7 +26,7 @@ class CocktailListAdapter(private val cocktailList: List<Cocktail>): RecyclerVie
         private var binding =  CocktailItemBinding.bind(itemView)
         fun bind(cocktail: Cocktail)  {
             binding.cocktailName.text = cocktail.name
-            binding.cocktailImage.setImageURI(Uri.parse(cocktail.imageURL))
+            binding.cocktailImage.load(cocktail.imageURL)
         }
     }
 }
