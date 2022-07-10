@@ -8,6 +8,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import com.example.barmapp.R
 import com.example.barmapp.databinding.ActivityMainBinding
+import com.example.barmapp.domain.di.koinModule
+import org.koin.core.context.GlobalContext.startKoin
 
 class MainActivity : AppCompatActivity() {
 

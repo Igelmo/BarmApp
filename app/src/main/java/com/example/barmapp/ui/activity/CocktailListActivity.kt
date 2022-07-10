@@ -8,11 +8,17 @@ import androidx.navigation.ui.navigateUp
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.barmapp.R
 import com.example.barmapp.databinding.CocktailListBinding
+import com.example.barmapp.domain.repository.CocktailRepository
+import com.example.barmapp.domain.viewmodel.CocktailListViewModel
 import com.example.barmapp.ui.adapter.CocktailListAdapter
+import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.java.KoinJavaComponent.inject
 
 class CocktailListActivity : AppCompatActivity() {
 
     private lateinit var binding: CocktailListBinding
+    val viewModelInstance: CocktailListViewModel by viewModel()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -33,6 +39,7 @@ class CocktailListActivity : AppCompatActivity() {
         binding.listOfCocktails.adapter = cocktailListAdapter
 
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
