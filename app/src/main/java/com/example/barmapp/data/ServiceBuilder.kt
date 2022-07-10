@@ -1,6 +1,6 @@
 package com.example.barmapp.data
 
-import com.example.barmapp.domain.dataStructures.Cocktail
+import com.example.barmapp.data.dataStructure.CocktailResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
@@ -12,14 +12,16 @@ private val moshi = Moshi.Builder()
                             .add(KotlinJsonAdapterFactory())
                             .build()
 
-private const val BASE_URL = "thecocktaildb.com/api/json/v1/1/"
+private const val BASE_URL = "https://thecocktaildb.com/api/json/v1/1/"
+
 private val retrofit = Retrofit.Builder()
                         .baseUrl(BASE_URL)
                         .addConverterFactory(MoshiConverterFactory.create(moshi))
                         .build()
+
 interface CocktailDBAPIService {
     @GET("search.php?f=a")
-    fun getCocktailsStartingWithA() : List<Cocktail>
+    suspend fun getCocktailsStartingWithA() : CocktailResponse
 }
 
 object CocktailDBAPI {
