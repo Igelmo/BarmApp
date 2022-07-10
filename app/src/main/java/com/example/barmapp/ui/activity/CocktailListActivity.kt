@@ -22,6 +22,8 @@ class CocktailListActivity : AppCompatActivity() {
         val manager = LinearLayoutManager(this)
         binding.listOfCocktails.layoutManager = manager
 
+        setSupportActionBar(binding.toolbar.toolbarMain)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.toolbar.toolbarMain.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24)
 
         val listCocktails: List<String>
@@ -30,6 +32,10 @@ class CocktailListActivity : AppCompatActivity() {
 
         binding.listOfCocktails.adapter = cocktailListAdapter
 
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 }

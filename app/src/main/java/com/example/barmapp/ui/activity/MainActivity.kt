@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toolbar.toolbarMain.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24)
         binding.viewCocktailsButton.setOnClickListener {
             startActivity(Intent(this, CocktailListActivity::class.java))
         }
