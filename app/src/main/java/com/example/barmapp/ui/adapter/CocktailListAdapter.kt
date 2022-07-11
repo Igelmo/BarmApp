@@ -1,14 +1,14 @@
 package com.example.barmapp.ui.adapter
 
-import android.net.Uri
+import android.content.Intent
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.barmapp.R
 import com.example.barmapp.databinding.CocktailItemBinding
 import com.example.barmapp.domain.dataStructures.Cocktail
+import com.example.barmapp.ui.activity.CocktailDetailsActivity
 import com.example.barmapp.ui.inflate
 
 class CocktailListAdapter(private val cocktailList: List<Cocktail>): RecyclerView.Adapter<CocktailListAdapter.ViewHolder>() {
@@ -18,6 +18,13 @@ class CocktailListAdapter(private val cocktailList: List<Cocktail>): RecyclerVie
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val cocktail = cocktailList[position]
         holder.bind(cocktail)
+        holder.itemView.setOnClickListener {
+            val intent = Intent(it.context, CocktailDetailsActivity::class.java)
+            intent.putExtra("cocktailName", cocktail.name)
+            intent.putExtra("cocktailImageURI", cocktail.imageURL)
+            intent.putExtra("cocktailInstructions", cocktail.instructions)
+            it.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = cocktailList.size
