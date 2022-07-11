@@ -23,8 +23,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:scaleType="centerCrop"
         android:contentDescription="@string/cocktail_image"
-        android:fadingEdge="vertical"
-        android:fadingEdgeLength="20sp"/>
+        android:foreground="@drawable/gradient"
+        />
 
     <TextView
         android:id="@+id/cocktailNameTitle"
