@@ -1,8 +1,7 @@
 package com.example.barmapp.domain.repository
 
-import android.media.Image
-import com.example.barmapp.domain.dataStructures.Cocktail
+import com.example.barmapp.domain.dataStructures.CocktailObject
 
 interface CocktailRepository {
-    suspend fun getCocktailsStartingWithA() : List<Cocktail>
+    suspend fun getCocktailsStartingWithA() : List<CocktailObject>
 }

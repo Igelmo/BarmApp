@@ -7,11 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.barmapp.R
 import com.example.barmapp.databinding.CocktailItemBinding
-import com.example.barmapp.domain.dataStructures.Cocktail
+import com.example.barmapp.data.dataStructure.Cocktail
+import com.example.barmapp.domain.dataStructures.CocktailObject
 import com.example.barmapp.ui.activity.CocktailDetailsActivity
 import com.example.barmapp.ui.inflate
 
-class CocktailListAdapter(private val cocktailList: List<Cocktail>): RecyclerView.Adapter<CocktailListAdapter.ViewHolder>() {
+class CocktailListAdapter(private val cocktailList: List<CocktailObject>): RecyclerView.Adapter<CocktailListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(parent.inflate(R.layout.cocktail_item))
 
@@ -31,7 +32,7 @@ class CocktailListAdapter(private val cocktailList: List<Cocktail>): RecyclerVie
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private var binding =  CocktailItemBinding.bind(itemView)
-        fun bind(cocktail: Cocktail)  {
+        fun bind(cocktail: CocktailObject)  {
             binding.cocktailName.text = cocktail.name
             binding.cocktailImage.load(cocktail.imageURL)
         }
