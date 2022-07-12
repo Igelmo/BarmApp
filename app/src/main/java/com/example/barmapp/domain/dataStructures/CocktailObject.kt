@@ -1,6 +1,5 @@
 package com.example.barmapp.domain.dataStructures
 
-import com.example.barmapp.data.dataStructure.Cocktail
 import com.squareup.moshi.Json
 
 data class CocktailObject(

@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.barmapp.R
 import com.example.barmapp.databinding.CocktailItemBinding
-import com.example.barmapp.data.dataStructure.Cocktail
 import com.example.barmapp.domain.dataStructures.CocktailObject
 import com.example.barmapp.ui.activity.CocktailDetailsActivity
 import com.example.barmapp.ui.inflate

@@ -1,6 +1,5 @@
 package com.example.barmapp.data
 
-import com.example.barmapp.data.dataStructure.Cocktail
 import com.example.barmapp.domain.dataStructures.CocktailObject
 import com.example.barmapp.domain.repository.CocktailRepository
 

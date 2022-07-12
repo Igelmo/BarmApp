@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.barmapp.data.dataStructure.Cocktail
 import com.example.barmapp.domain.dataStructures.CocktailObject
 import com.example.barmapp.domain.repository.CocktailRepository
 import kotlinx.coroutines.launch

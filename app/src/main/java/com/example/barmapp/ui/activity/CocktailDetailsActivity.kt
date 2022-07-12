@@ -2,11 +2,9 @@ package com.example.barmapp.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
 import com.example.barmapp.R
 import com.example.barmapp.databinding.ActivityCocktailDetailsBinding
-import com.example.barmapp.databinding.CocktailListBinding
 
 class CocktailDetailsActivity : AppCompatActivity() {
 

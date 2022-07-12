@@ -3,13 +3,7 @@ package com.example.barmapp.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import com.example.barmapp.R
 import com.example.barmapp.databinding.ActivityMainBinding
-import com.example.barmapp.domain.di.koinModule
-import org.koin.core.context.GlobalContext.startKoin
 
 class MainActivity : AppCompatActivity() {
 
