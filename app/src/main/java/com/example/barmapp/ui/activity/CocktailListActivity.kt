@@ -12,7 +12,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class CocktailListActivity : AppCompatActivity() {
 
     private lateinit var binding: CocktailListBinding
-    val viewModelInstance: CocktailListViewModel by viewModel()
+    private val viewModelInstance: CocktailListViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,7 +1,9 @@
 package com.example.barmapp
 
 import android.app.Application
-import com.example.barmapp.domain.di.koinModule
+import com.example.barmapp.data.di.dataModule
+import com.example.barmapp.domain.di.domainModule
+import com.example.barmapp.ui.di.uiModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
@@ -12,7 +14,7 @@ class BarmAppApplication : Application() {
         startKoin{
             androidLogger()
             androidContext(this@BarmAppApplication)
-            modules(koinModule)
+            modules(domainModule, uiModule, dataModule)
         }
     }
 
